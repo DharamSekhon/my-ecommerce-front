@@ -339,6 +339,7 @@
 
 // pages/login.js
 import Login from "@/components/login";
+
 const LoginPage = () => {
   return (
     <div>
@@ -349,3 +350,223 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
+
+// import React from 'react';
+// import styled from 'styled-components';
+
+// // Define the colors and fonts used in the webpage
+// const colors = {
+//   darkBlue: '#0E1E2F',
+//   white: '#FFFFFF',
+//   lightGrey: '#E8E8E8',
+//   black: '#000000',
+// };
+
+// const fonts = {
+//   primary: 'Roboto, sans-serif',
+//   secondary: 'Poppins, sans-serif',
+// };
+
+// // Create a container component that covers the entire screen
+
+// const Container = styled.div`
+//   display: flex;
+//   height: 100vh;
+//   width: 100vw;
+//   /* background-color: cyan; */
+//   background-size: cover; /* Change cover to contain or other values */
+//   background-position: center;
+//   background-image: url('kelly.jpg');
+//   margin: auto ;
+  
+// `;
+
+// // Create a component for the logo section on the left side
+// const LogoSection = styled.div`
+//   flex: 1;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   /* background-color: ${colors.darkBlue}; */
+// `;
+
+// // Create a component for the logo image on the left side
+// const LogoImage = styled.img`
+//   height: 80px;
+//   width: auto;
+//   /* margin-bottom: 10px; */
+// `;
+
+// // Create a component for the logo text on the left side
+// const LogoText = styled.div`
+//   font-family: ${fonts.secondary};
+//   font-size: 36px;
+//   font-weight: bold;
+//   margin-left: 100px;
+//   color: ${colors.white};
+// `;
+
+// // Create a component for the form section on the right side
+// const FormSection = styled.div`
+//   flex: 1;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
+
+// // Create a component for the form element on the right side
+// const Form = styled.form`
+//   width: 400px;
+//   padding: 20px;
+//   background-color: ${colors.white};
+//   border-radius: 10px;
+//   height: auto;
+  
+//   /* box-shadow: 0 0 10px ${colors.lightGrey}; */
+// `;
+
+// // Create a component for the sign in text above the form element
+// const SignInText = styled.div`
+//   font-family: ${fonts.primary};
+//   font-size: 30px;
+//   font-weight: bold;
+//   color: ${colors.black};
+//   text-align: center;
+//   margin-bottom: 20px;
+// `;
+
+// // Create a component for the input field for email address
+
+// // Create a component for the continue button below the input field
+// ;
+
+// // Create a component for the or text below the continue button
+
+// const SocialButtons = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center; /* Center-align the content */
+// `;
+
+// // Update the SocialButton component
+// const SocialButton = styled.button`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 40px; //Remove width property to allow it to take the full width of the container
+//   border: none;
+//   border-radius: 5px;
+//   font-family: ${fonts.primary};
+//   font-size: 18px;
+//   font-weight: bold;
+//   color: ${colors.white};
+//   cursor: pointer;
+//   margin: 5px;
+//   margin-bottom: 15px;
+//   width: 80%; /* Add this to make the button take the full width of the container */
+// `;
+
+// // Update the SocialIcon component (no change needed)
+// const SocialIcon = styled.img`
+//   height: 20px;
+//   width: auto;
+//   margin-right: 10px;
+// `;
+// // Create a component for the social buttons below the or text
+// // const SocialButtons = styled.div`
+  
+// //   flex-direction: column;
+// //   justify-content: center;
+// //   align-items: center;
+// //   width: auto;
+// //   margin: 0 10px;
+// // `;
+
+// // // Create a component for the social button for each provider
+// // const SocialButton = styled.button`
+// //   display: flex;
+// //   justify-content: center;
+// //   align-items: center;
+// //   width: 250px;
+// //   height: 40px;
+// //   border: none;
+// //   border-radius: 5px;
+// //   font-family: ${fonts.primary};
+// //   font-size: 18px;
+// //   font-weight: bold;
+// //   color: ${colors.white};
+// //   cursor: pointer;
+// //   margin: 5px;
+// // `;
+
+// // // Create a component for the social icon for each provider
+// // const SocialIcon = styled.img`
+// //   height: 20px;
+// //   width: auto;
+// //   margin-right: 10px;
+// // `;
+
+// // Define the sources of the logo and social icons
+// const logoSrc = '';
+// const googleSrc = '';
+// const facebookSrc = '';
+// const appleSrc = '';
+
+// async function loginDiscord(e) {
+//   e.preventDefault();
+//   await signIn('twitter', { callbackUrl: '/' });
+  
+// }
+// // Define the main component that renders the webpage
+// const App = () => {
+//   return (
+//     <backCon>
+//     <Container>
+//       <LogoSection>
+//         {/* <LogoImage src={logoSrc} /> */}
+//         <LogoText>Welcome to </LogoText>
+//         <LogoText>Ecommerce Website</LogoText>
+//       </LogoSection>
+//       <FormSection>
+//         <Form>
+//           <SignInText>Sign in</SignInText>
+          
+          
+//           <SocialButtons>
+//             <SocialButton style={{ backgroundColor: '#DB4437' }}>
+//               <SocialIcon src={googleSrc} />
+//               Continue with Google
+//             </SocialButton>
+//             <SocialButton style={{ backgroundColor: '#3B5998' }}>
+//               <SocialIcon src={facebookSrc} />
+//               Continue with Facebook
+//             </SocialButton>
+//             <SocialButton style={{ backgroundColor: '#000000' }}>
+//               <SocialIcon src={appleSrc} />
+//               Continue with Github
+//             </SocialButton>
+//             <SocialButton style={{ backgroundColor: '#DB4437' }}>
+//               <SocialIcon src={appleSrc} />
+//               Continue with Reddit
+//             </SocialButton>
+//             <SocialButton style={{ backgroundColor: 'black' }}>
+//               <SocialIcon src={appleSrc} />
+//               Continue with Discord
+//             </SocialButton>
+//             <SocialButton style={{ backgroundColor: 'black' }}>
+//               <SocialIcon onClick={loginDiscord} src={appleSrc} />
+//               Continue with twitter
+//             </SocialButton>
+//           </SocialButtons>
+//         </Form>
+//       </FormSection>
+//     </Container>
+//     </backCon>
+//   );
+// };
+
+// export default App;

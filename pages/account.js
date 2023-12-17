@@ -301,16 +301,16 @@ export default function AccountPage() {
                   
                   <Button primary onClick={logout}>Logout</Button>
                 )}
-                {!session && (
+                {/* {!session && (
                   <Logindetails>New User?
                   <ButtonNew primary onClick={() => router.push('/register')}>Register here</ButtonNew></Logindetails>
                 )}<br/>
-                <br/>
+                <br/> */}
                 
                 
                 {!session && (
-                  <Logindetails> Have an Account?
-                  <ButtonNew primary onClick={() => router.push('/login')}>Login here </ButtonNew></Logindetails>
+                  <Logindetails> Log in to see Account details
+                  <ButtonNew primary onClick={() => router.push('/login')}>Log in here </ButtonNew></Logindetails>
                 )}
               </WhiteBox>
             </RevealWrapper>
