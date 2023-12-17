@@ -306,7 +306,7 @@ const Login = () => {
         <GoogleButton onClick={login}>Signin with google</GoogleButton>
         </GoogleForm>
 
-        <Text4>Don't have an Account? <ForgotPasswordLink onClick={handleForgotPasswordClick}>Sign Up now</ForgotPasswordLink></Text4>
+        <Text4>Do not have an Account? <ForgotPasswordLink onClick={handleForgotPasswordClick}>Sign Up now</ForgotPasswordLink></Text4>
         
         </RightSection>
      
