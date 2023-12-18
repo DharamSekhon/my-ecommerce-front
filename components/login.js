@@ -512,6 +512,13 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { signIn } from 'next-auth/react';
 import styled from 'styled-components';
+import { FaGithubSquare } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaReddit } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
+
+
 
 const colors = {
   darkBlue: '#0E1E2F',
@@ -531,7 +538,7 @@ const Container = styled.div`
   width: 100vw;
   background-size: cover;
   background-position: center;
-  background-image: url('form_bg.jpg');
+  background-image: url('adrien.jpg');
   margin: auto;
 `;
 
@@ -552,7 +559,7 @@ const LogoText = styled.div`
   font-family: ${fonts.secondary};
   font-size: 36px;
   font-weight: bold;
-  margin-left: 100px;
+  margin-left: 150px;
   color: ${colors.white};
 `;
 
@@ -608,9 +615,75 @@ const SocialButton = styled.button`
 const SocialIcon = styled.img`
   height: 20px;
   width: auto;
-  margin-right: 10px;
+  margin-right: 27px;
    
 `;
+const StyledGithubIcon = styled(FaGithubSquare)`
+  display: inline-block;
+  height: 25px; /* Adjust the height as needed */
+  width: auto; /* Automatically adjust the width based on height */
+  /* color: #ffffff; Set the desired color */
+  margin-right: 1.9rem; /* Adjust the margin as needed */
+`;
+
+const StyledFacebookIcon = styled(FaFacebook)`
+  display: inline-block;
+  height: 25px; /* Adjust the height as needed */
+  width: auto; /* Automatically adjust the width based on height */
+  /* color: #ffffff; Set the desired color */
+  margin-right: 0.7rem; /* Adjust the margin as needed */
+`;
+
+const StyledRedditIcon = styled(FaReddit)`
+  display: inline-block;
+  height: 25px; /* Adjust the height as needed */
+  width: auto; /* Automatically adjust the width based on height */
+  /* color: #ffffff; Set the desired color */
+  margin-right: 2rem; /* Adjust the margin as needed */
+`;
+
+const StyledDiscordIcon = styled(FaDiscord)`
+  display: inline-block;
+  height: 25px; /* Adjust the height as needed */
+  width: auto; /* Automatically adjust the width based on height */
+  /* color: #ffffff; Set the desired color */
+  margin-right: 1.5rem; /* Adjust the margin as needed */
+`;
+
+const SocialButtonWithGithubIcon = ({ onClick, style, alt }) => (
+  <SocialButton onClick={onClick} style={style}>
+    {alt === 'GitHub' && <StyledGithubIcon/>}
+    Continue with {alt}
+  </SocialButton>
+);
+
+const SocialButtonWithFacebookIcon = ({ onClick, style, alt }) => (
+  <SocialButton onClick={onClick} style={style}>
+    {alt === 'Facebook' && <StyledFacebookIcon />}
+    Continue with {alt}
+  </SocialButton>
+);
+
+const SocialButtonWithGoogleIcon = ({ onClick, style, alt }) => (
+  <SocialButton onClick={onClick} style={style}>
+    {alt === 'Google' && <FaGoogle className="inline-block h-8 w-8 text-white mr-2" />}
+    Continue with {alt}
+  </SocialButton>
+);
+
+const SocialButtonWithRedditIcon = ({ onClick, style, alt }) => (
+  <SocialButton onClick={onClick} style={style}>
+    {alt === 'Reddit' && <StyledRedditIcon />}
+    Continue with {alt}
+  </SocialButton>
+);
+
+const SocialButtonWithDiscordIcon = ({ onClick, style, alt }) => (
+  <SocialButton onClick={onClick} style={style}>
+    {alt === 'Discord' && <StyledDiscordIcon />}
+    Continue with {alt}
+  </SocialButton>
+);
 
 const SocialButtonWithIcon = ({ onClick, style, src, alt }) => (
   <SocialButton onClick={onClick} style={style}>
@@ -665,30 +738,31 @@ const Login = () => {
                 src="/googlelogo.png" // Replace with your Google icon path
                 alt="Google"
               />
-              <SocialButtonWithIcon
+              <SocialButtonWithFacebookIcon
                 onClick={loginFacebook}
                 style={{ backgroundColor: '#0D4982', color: 'white' }}
-                src="/facebooklogo.png" // Replace with your Google icon path
+                // src="/facebooklogo.png" // Replace with your Google icon path
                 alt="Facebook"
+                
               />
-              <SocialButtonWithIcon
+              <SocialButtonWithGithubIcon
                 onClick={loginGithub}
                 style={{ backgroundColor: 'black' }}
-                src="/Github.png" // Replace with your GitHub icon path
+                // src="/Github.png" // Replace with your GitHub icon path
                 alt="GitHub"
               />
 
-              <SocialButtonWithIcon
+              <SocialButtonWithRedditIcon
                 onClick={loginReddit}
                 style={{ backgroundColor: '#FF4500' }}
-                src="/redditlogo.png" // Replace with your GitHub icon path
+                // src="/redditlogo.png" // Replace with your GitHub icon path
                 alt="Reddit"
               />
 
-              <SocialButtonWithIcon
+              <SocialButtonWithDiscordIcon
                 onClick={loginDiscord}
                 style={{ backgroundColor: '#5865F2' }}
-                src="/discordlogo.png" // Replace with your GitHub icon path
+                // src="/discordlogo.png" // Replace with your GitHub icon path
                 alt="Discord"
               />
               {/* Add more social buttons as needed */}
